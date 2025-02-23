@@ -1,0 +1,72 @@
+🔥 Core Features
+🎯 1. User Authentication & Roles
+Login/Register System (Students, Admin, Recruiters)
+Role-Based Access
+
+📊 2. Placement Data Dashboard
+Total Students (ADD data through csv and manually)
+, Placed, Not Placed, Percentage
+Average, Highest, Lowest Package
+Year-wise & Department-wise Placement Trends
+Company-wise Placement Statistics
+Package Distribution Graphs
+🏆 3. Placement Prediction (ML)
+Predict if a student will get placed based on:
+CGPA, Backlogs, Certifications, Internships, Skills, etc.
+Predict expected salary package
+Show probability & insights on how to improve
+📑 4. Resume & Profile Management
+Students upload resume
+Profile Sections: Skills, Experience, CGPA, Certifications
+Recruiters can search & filter students
+📢 5. Job Listings & Company Details
+Recruiters can post job openings
+Students can apply for jobs
+Track application status
+🏛️ 6. College-Wide Placement Insights
+Compare current year placements with past years
+Department-wise success rates
+Recruiters’ hiring trends
+💡 7. Advanced Analytics & Reports
+Heatmaps & Bar Charts for placement trends
+AI-based Resume Scoring
+Custom Reports Export (Excel, CSV, PDF)
+📣 8. Notifications & Announcements
+Upcoming Placement Drives
+Application Deadlines
+Recruiter Messages
+🚀 Website Structure
+1️⃣ Homepage
+Overview of placement stats
+Recent job postings
+Call-to-action for students & recruiters
+2️⃣ Student Dashboard
+Profile & Resume Management
+Placement Prediction
+Job Applications Status
+Improvement Suggestions
+3️⃣ Admin Panel
+Upload student data (Excel)
+Manage recruiters
+Track placement progress
+Generate reports & insights
+4️⃣ Recruiter Dashboard
+Search candidates
+Post job openings
+Schedule interviews
+View analytics on hiring trends
+5️⃣ Analytics Page
+Graphs & Charts for placement data
+Department-wise insights
+Compare different years & companies
+🛠️ Tech Stack Suggestion
+Backend: Django + DRF (for API)
+Frontend: React.js (for dynamic UI)
+Database: PostgreSQL/MySQL (for structured data)
+ML Model: Scikit-learn (for placement prediction)
+Hosting: DigitalOcean / AWS
+🎯 Extra Features (Optional but Useful)
+✅ AI Chatbot for Placement Queries
+✅ Mock Interview Section
+✅ Automated Resume Feedback System
+✅ Alumni Network for Mentorship

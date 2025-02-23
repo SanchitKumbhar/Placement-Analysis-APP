@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href={% static "style/register.css" %}>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="formContainer">
+
+            <form method="post" class="form" id="loginForm">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button class="btn" type="submit">Login</button>
+                <button type="button" class="toggle-btn" onclick="toggleForm()">Don't have an account? Register</button>
+            </form>
+            <form method="post" class="form" id="registerForm" style="display: none;">
+                <h2>Register</h2>
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}" id="csrf_token">
+
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <button class="btn">Register</button>
+                <button type="button" class="toggle-btn" onclick="toggleForm()">Already have an account? Login</button>
+            </form>
+        </div>
+    </div>
+    <script src={% static "scripts/register.js" %}></script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Dashboard</title>
+    <link rel="stylesheet" href={% static "style/dashboard.css" %}>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>📊 Placement Dashboard</h1>
+        <div class="stats">
+            <div class="card">Total Students: <span id="total-students">0</span></div>
+            <div class="card placed">Placed: <span id="placed-students">0</span></div>
+            <div class="card not-placed">Not Placed: <span id="not-placed-students">0</span></div>
+            <div class="card package">Avg Package: <span id="avg-package">0 LPA</span></div>
+        </div>
+
+        <div class="controls">
+            <input type="file" id="csv-upload" accept=".csv">
+            <button onclick="uploadCSV()">📂 Upload CSV</button>
+            <input type="text" id="search" placeholder="🔍 Search by name..." onkeyup="searchStudent()">
+        </div>
+
+        <h2>➕ Predict Student Placement</h2>
+        <form action="" method="post">
+        <div class="add-student-form">
+            <input type="hidden" id="csrf-token" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            <input type="text" id="cgpa" placeholder="CGPA">
+            <input type="text" id="mp" placeholder="Major Project">
+            <input type="text" id="mini" placeholder="Mini Project">
+            <input type="text" id="ws" placeholder="Workshop">
+            <input type="text" id="sk" placeholder="Skills">
+            <input type="text" id="com" placeholder="Communication">
+            <input type="text" id="12th" placeholder="12th %">
+            <input type="text" id="10th" placeholder="10th %">
+            <input type="text" id="BL" placeholder="Backlogs">
+            <select id="Internship">
+                <option value="1">Internship Yes</option>
+                <option value="0">Internship No</option>
+            </select>
+
+            <select id="Hackathon">
+                <option value=1>Hackathon Yes</option>
+                <option value=0>Hackathon No</option>
+            </select> <button id="predict">✅ Check</button>
+        </div>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Status</th>
+                    <th>Package</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="student-table">
+            </tbody>
+        </table>
+    </div>
+    <script src={% static 'scripts/dashboard.js' %}></script>
+</body>
+
+</html>
