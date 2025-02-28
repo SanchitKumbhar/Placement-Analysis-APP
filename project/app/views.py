@@ -62,3 +62,13 @@ class PredictPlacementAPI(APIView):
             return JsonResponse({"prediction": "Placed"})
         else:
             return JsonResponse({"prediction": "Not Placed"})
+class SalaryPrediction(APIView):
+    def post(self,request):
+        data = request.data
+        print([list(data.values())])
+        loadModel = joblib.load("model_salary.joblib")
+        prediction=loadModel.predict([list(data.values())])
+        print(prediction)
+        return JsonResponse({
+            "prediction" : int(prediction[0])
+        })

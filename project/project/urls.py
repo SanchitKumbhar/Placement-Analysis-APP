@@ -23,5 +23,7 @@ urlpatterns = [
     # path('student/', StudentAPI.as_view()),0
     path('api/v1/login/', LoginAPI.as_view()),
     path('api/v1/register/', RegisterAPI.as_view()),
-    path('api/v1/prediction-placement/', PredictPlacementAPI.as_view())
+    path('api/v1/prediction-placement/', PredictPlacementAPI.as_view()),
+        path('api/v1/prediction-salary/', SalaryPrediction.as_view())
+
 ]
